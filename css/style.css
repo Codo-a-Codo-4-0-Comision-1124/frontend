@@ -12,6 +12,8 @@ SELECTOR {
 * {
    background-color: black;
    color: white;
+   margin-top: 0px;
+   margin-left: 0px;
 }
 
 a {
@@ -24,6 +26,9 @@ header {
 }
 
 footer {
+    position: fixed;
+    bottom: 0%;
+    /*bottom: 10vh;*/
     background-color: gray !important; /* */
     /*font-size: 0vh;*/
     font-family: 'ZCOOL KuaiLe', cursive;
