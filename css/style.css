@@ -1,0 +1,81 @@
+/*
+Esto es un comentario
+
+SELECTOR {
+    propiedad: valor;
+}
+
+
+*/
+
+
+* {
+   background-color: black;
+   color: white;
+}
+
+a {
+    background-color: blue;
+}
+
+header {
+    background-color: yellow;
+    color: black;
+}
+
+footer {
+    background-color: gray !important; /* */
+    /*font-size: 0vh;*/
+    font-family: 'ZCOOL KuaiLe', cursive;
+    /*
+    vw : el ancho del viewport
+    vh: el alto del viewport
+    */
+}
+
+/* Lo usamos con class en los atributos de HTML*/
+.Botoncito {
+    background-color: red;
+}
+
+
+img {
+    border-style: dotted;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.classIMG {
+    border-style: none;
+}
+
+/*
+a > img {
+     border-style: none;
+}
+*/
+
+/*td img {
+    border-style: none;
+}*/
+
+/*a + img {
+    border-style: none;
+}*/
+
+td > a img {
+   border-style: none;
+}
+
+table > tbody > tr:nth-child(2) > td:nth-child(1) > img {
+    border-style: double;
+}
+
+/**************************************************/
+/*             Aca van los ID                    */
+/**************************************************/
+
+/* Lo usamos con ID en los atributos de HTML*/
+#login001 {
+    background-color: blueviolet;
+}
