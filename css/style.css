@@ -91,9 +91,24 @@ td > a img {
    border-style: none;
 }
 
+tr > td > a::after {
+    content: "🚧";
+}
+
+/* Este afecta a todos por no haber agregado un selector al comienzo*/
+::selection {
+    color: red;
+    background: yellow;
+}
+
+table > tbody > tr:nth-child(n) > td:nth-child(even)  {
+    font-size: xx-large;
+}
+
 table > tbody > tr:nth-child(2) > td:nth-child(1) > img {
     border-style: double;
 }
+
 
 /**************************************************/
 /*             Aca van los ID                    */
