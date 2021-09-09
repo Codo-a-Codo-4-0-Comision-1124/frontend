@@ -25,6 +25,25 @@ header {
     color: black;
 }
 
+/* Siempre hay que revisar si necesitamos agrupar selectores*/
+.inicio, .registro  {
+    background-color: aqua;
+}
+
+/*element.class element*/
+form.registro fieldset {
+    background-color: aqua;
+}
+
+/*body > form > fieldset {
+    background-color: aqua;
+}*/
+
+input[required] {
+    background-color: red;
+}
+
+/*~*/
 footer {
     position: fixed;
     bottom: 0%;
