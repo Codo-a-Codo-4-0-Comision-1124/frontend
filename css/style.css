@@ -18,6 +18,13 @@ SELECTOR {
 
 a {
     background-color: blue;
+    animation-name: changeColor;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+a:hover {
+    background-color: red;
 }
 
 header {
@@ -89,11 +96,13 @@ a > img {
 
 td > a img {
    border-style: none;
+   transform: skewY(-20deg) /* Transform 2D*/
 }
 
 tr > td > a::after {
     content: "🚧";
 }
+
 
 /* Este afecta a todos por no haber agregado un selector al comienzo*/
 ::selection {
@@ -117,4 +126,18 @@ table > tbody > tr:nth-child(2) > td:nth-child(1) > img {
 /* Lo usamos con ID en los atributos de HTML*/
 #login001 {
     background-color: blueviolet;
+}
+
+/**************************************************/
+/*            Animaciones                         */
+/**************************************************/
+@keyframes changeColor {
+    from {
+        background-color: aqua;
+        
+    }
+    to { 
+        background-color: brown;
+       
+    }
 }
