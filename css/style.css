@@ -141,3 +141,23 @@ table > tbody > tr:nth-child(2) > td:nth-child(1) > img {
        
     }
 }
+
+/**************************************************/
+/*            header                         */
+/**************************************************/
+.notflix_header {
+    display: none;
+   
+}
+
+/* 
+A partir de una pantalla de 600 px voy a setear estas propiedaes
+*/
+@media only screen and (min-width: 600px) {
+
+    /* Ahora modifico las propiedad de cada class dentro del media query*/
+    .notflix_header {
+        display: flex;
+        flex-direction: column;
+    }
+}
