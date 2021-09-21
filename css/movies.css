@@ -1,0 +1,42 @@
+.container {
+   display: flex;
+    flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.item {
+    border-width: 2px;
+    border-color: red;
+}
+
+/******************************/
+/*  Defino los items de la grilla*/
+/******************************/
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.content {
+    grid-area: content;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header header'
+                         'menu menu content content'
+                         'footer footer footer footer';
+}
+
+@media only screen and (max-width: 570px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: 'header'
+                             'menu'
+                             'content'
+                             'footer';
+    }
+}

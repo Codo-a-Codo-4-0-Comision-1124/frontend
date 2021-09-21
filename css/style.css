@@ -8,6 +8,7 @@ SELECTOR {
 
 */
 
+@import url(movies.css);
 
 * {
    background-color: black;
