@@ -1,20 +1,19 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-  
-          form.classList.add('was-validated')
-        }, false)
-      })
-  })()
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    posts: [],
+  },
+  methods: {
+    retrieve: function () {
+      var self = this;
+      // Retrieve posts usando GET y Fetch
+      fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(function (response) {
+          return response.json();
+        }).then(function (json) {
+          self.posts = json;
+        });
+    }
+  }
+})

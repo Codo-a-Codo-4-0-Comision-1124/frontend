@@ -9,44 +9,22 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/59c8ee105d.js" crossorigin="anonymous"></script>
-    <title>Clase 07 - Netflix de Codo Desarrollo</title>
-    <!--
-        Esto es un bloque de comentario
-    -->
-
-    <!--
-        Malas practicas, preferible no hacerlo...
-        <style>
-            footer {
-                background-color: violet;
-            }
-        </style>
-    -->
-
+    <title>VueJS - Netflix de Codo Desarrollo</title>
 </head>
-
 <body>
-
-    <!-- img src="https://www.w3schools.com/html/pic_trulli.jpg" -->
-    <br>
-    <!-- Usar / barra -->
-    <a href="pages/movies.html">
-        <i class="fa fa-film ">Peliculas</i>    
-    </a>
-    <br>
-    <a id="login001" href="pages/login.html">Ingresar</a>
-    <br>
-    <a class="Botoncito" href="pages/signup.html">Registro</a>
-    <br>
-    <a class="Botoncito" href="pages/contact.html">Contactanos</a>
-    <br>
-    <a href="https://www.google.com" target="__blank">Enlace a otro lado</a>
-    <!-- No hacerlo... malas practicas 
-        <footer style="background-color:turquoise;"> Copyright 2021</footer>
-    -->
+    <div id="app">
+        {{ message }}
+        <button @click="retrieve()">Click me!</button>
+        <ul v-for="post in posts" v-bind:key="post.id">
+            <li>{{ post.title }}</li>
+            <p>{{ post.body }}</p>
+        </ul>
+    </div>
+   
     <footer style="background-color:turquoise;"> Copyright 2021</footer>
-    <script src="js/tests.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
